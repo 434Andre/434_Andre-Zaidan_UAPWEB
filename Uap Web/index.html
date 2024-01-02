@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF -8" />
+    <meta name="viewport" />
+    <title>Program Kasir</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+    }
+
+    label {
+      margin-left: 5px;
+    }
+    input,
+    button {
+      margin-right: 20 px;
+    }
+  </style>
+  <body>
+    <h2>Program Kasir</h2>
+    <label for="kodebarang">Kode</label>
+    <input type="kode" id="kodebarang" placeholder="Masukkan kode" />
+
+    <label for="nama barang">Nama Barang</label>
+    <input type="text" id="namabarang" placeholder="Masukkan nama barang" />
+
+    <label for="hargabarang">Harga</label>
+    <input type="harga" id="hargabarang" placeholder="Masukkan harga barang" />
+
+    <button onclick="tambahkanbarang()">Tambah Barang</button>
+
+    <script>
+      function tambahkanbarang() {
+        var kodebarang = document.getElementById("kodebarang").value;
+        var namabarang = document.getElementById("namabarang").value;
+        var hargabarang = parseFloat(document.getElementById("hargabarang").value);
+
+        var TotalBelanja = parseFloat.(document.getElementById("TotalBelanja").value);
+        TotalBelanja +=hargabarang
+      }
+    </script>
+  </body>
+  <label for="kodebarang">Kode</label>
+  <input type="kode" id="kodebarang" placeholder="Masukkan kode" />
+
+  <label for="nama barang">Nama Barang</label>
+  <input type="text" id="namabarang" placeholder="Masukkan nama barang" />
+  <button onclick="tambahkanbarang()">Submit</button>
+  <div id="Total Belanja">Total Belanja</div>
+  <div id="detail belanja"></div>
+</html>
